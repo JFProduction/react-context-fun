@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import Tester from './Tester';
-import MyContext from '../../MyContext';
+import MyContext from '../../contexts/MyContext';
+import ContextPresentation from '../presentation/ContextPresentation';
 
 export default class ContextTester extends Component { 
     constructor(props) {
         super(props);
 
+        // implementation of changeName
         this.changeName = e => {
             this.setState({
                 name: e.target.value
@@ -21,7 +22,7 @@ export default class ContextTester extends Component {
     render() {
         return (
             <MyContext.Provider value={ this.state }>
-                <Tester />
+                <ContextPresentation />
             </MyContext.Provider>
         );
     }
