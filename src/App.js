@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import MyContext from './MyContext';
 import './App.css';
 import ContextTester from './components/container/ContextTester';
 
