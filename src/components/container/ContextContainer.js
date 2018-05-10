@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import MyContext from '../../contexts/MyContext';
 import ContextPresentation from '../presentation/ContextPresentation';
 
-export default class ContextTester extends Component { 
+export default class ContextContainer extends Component { 
     constructor(props) {
         super(props);
 
@@ -14,7 +14,7 @@ export default class ContextTester extends Component {
         }
 
         this.state = {
-            name: "jimmyfargo",
+            name: "jimmyfargo context",
             changeName: this.changeName
         }
     }
