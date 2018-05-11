@@ -1,3 +1,7 @@
+body {
+  background: #f9f9f9;
+}
+
 .App {
   text-align: center;
 }
@@ -25,4 +29,27 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+.container {
+  width: 80%;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+button {
+  height: 30px;
+  width: 100px;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.02), 
+		0 1px 1px 0 rgba(0,0,0,0.08);
+  background: none;
+  transition: all 100ms ease-in-out;
+  border-radius: 3px;
+  border: none;
+}
+
+button:hover {
+  cursor: pointer;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.02),
+    0px 10px 10px -10px rgba(0,0,0,0.2);
 }
