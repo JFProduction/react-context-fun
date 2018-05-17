@@ -1,6 +1,6 @@
-import ReduxPresentation from '../presentation/ReduxPresentation'
 import { connect } from 'react-redux'
 import { boundChangeName } from '../../redux/actions/ChangeNameAction'
+import ReduxPresentation from '../presentation/ReduxPresentation'
 
 const getName = name => {
 	return name

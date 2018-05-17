@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-// import ContextContainer from './components/container/ContextContainer';
-// import ReduxContainer from './components/container/ReduxContainer';
-// import { Provider } from 'react-redux';
-// import { changeNameStore } from './redux/stores/ChangeNameStore'
-import CETCheck from './components/container/CETCheck'
+import { Provider } from 'react-redux';
+import { changeNameStore } from './redux/stores/ChangeNameStore';
+import ContextContainer from './components/container/ContextContainer';
+import ReduxContainer from './components/container/ReduxContainer';
+import RefContainer from './components/container/RefContainer';
 
 class App extends Component {
   render() {
@@ -13,13 +13,13 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Checkout CET</h1>
+          <h1 className="App-title">React Stuff</h1>
         </header>
-        {/* <ContextContainer />
+        <ContextContainer />
         <Provider store={ changeNameStore }>
           <ReduxContainer />
-        </Provider> */}
-        <CETCheck />
+        </Provider>
+        <RefContainer />
       </div>
     );
   }
