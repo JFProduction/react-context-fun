@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import ForwardedRefPresentation from '../presentation/ForwardedRefPresentation'
 
 export default class RefContainer extends Component {
     constructor() {
@@ -7,6 +8,7 @@ export default class RefContainer extends Component {
         this.state = {
             userInput: 'jimmyfargo'
         }
+
         this.userInputRef = React.createRef()
     }
     
@@ -15,7 +17,7 @@ export default class RefContainer extends Component {
         this.userInputRef.current.focus()
     }
 
-    updateUserInput() {
+    updateUserInputDeep() {
         this.setState({
             userInput: this.userInputRef.current.value
         })
@@ -27,8 +29,8 @@ export default class RefContainer extends Component {
         return (
             <div style={{ marginTop: 10 }}>
                 <p>Hello, { userInput } from a ref object</p>
-                <input type="text" ref={ this.userInputRef }
-                    onChange={ () => this.updateUserInput() } />
+                <ForwardedRefPresentation ref={ this.userInputRef }
+                    onChange={ () => this.updateUserInputDeep() } />
             </div>
         )
     }
