@@ -21,7 +21,7 @@ export default class CETCheck extends Component {
             getDataInterval: setInterval(() => {
                 APIManager.get("http://localhost:4000/getInfo", null, (err, resp) => {
                     if (err) {
-                        alert(err)
+                        console.error(err)
                     }
         
                     if (resp.status === 200) {

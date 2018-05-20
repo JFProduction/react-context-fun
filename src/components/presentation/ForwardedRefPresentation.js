@@ -3,10 +3,12 @@ import React from 'react'
 const ForwardedRefPresentation = React.forwardRef((props, ref) => {
     // ref comes from the parent, and can be used there
     return (
-        <div>
-            <input type="text"
+        <div style={{ marginBottom: 10 }}>
+            <input className="form-control" 
+                type="text"
                 ref={ ref }
-                { ...props } />
+                { ...props } 
+            />
         </div>
     )
 })

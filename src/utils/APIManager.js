@@ -11,9 +11,9 @@ export default {
                 return
             }
 
-            const status = response.body.status
+            const status = response.body.status ? response.body.status : response.status
             if (status !== 200) {
-                callback({ message: response.body.message }, null)
+                callback({ message: response.body }, null)
                 return
             }
 
