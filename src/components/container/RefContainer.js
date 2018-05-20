@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import ForwardedRefPresentation from '../presentation/ForwardedRefPresentation'
+import InputRef from '../presentation/InputRef'
 
 export default class RefContainer extends Component {
     constructor() {
@@ -29,7 +29,8 @@ export default class RefContainer extends Component {
         return (
             <div style={{ marginTop: 10 }}>
                 <p>Hello, { userInput } from a ref object</p>
-                <ForwardedRefPresentation ref={ this.userInputRef }
+                <InputRef ref={ this.userInputRef }
+                    placeHolder="type something here"
                     onChange={ () => this.updateUserInputDeep() } />
             </div>
         )

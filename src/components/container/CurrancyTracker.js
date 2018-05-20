@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import APIManager from '../../utils/APIManager'
 import CurrancyPresentation from '../presentation/CurrancyPresentation'
-import ForwardedRefPresentation from '../presentation/ForwardedRefPresentation';
+import InputRef from '../presentation/InputRef';
 
 export default class CurrancyTracker extends Component {
     constructor() {
@@ -45,8 +45,7 @@ export default class CurrancyTracker extends Component {
         return (
             <div className="container row" 
                     style={{ margin: '0 auto', textAlign: 'center' }}>
-                <ForwardedRefPresentation 
-                    ref={ this.filterRef }
+                <InputRef ref={ this.filterRef }
                     onChange={ () => this.filterData() }
                     placeHolder="filter currancies" />
                 {

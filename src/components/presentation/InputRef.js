@@ -1,10 +1,10 @@
 import React from 'react'
 
-const ForwardedRefPresentation = React.forwardRef((props, ref) => {
+const InputRef = React.forwardRef((props, ref) => {
     // ref comes from the parent, and can be used there
     return (
-        <div style={{ marginBottom: 10 }}>
-            <input className="form-control" 
+        <div style={{ margin: 10 }}>
+            <input className="form-control"
                 type="text"
                 ref={ ref }
                 { ...props } 
@@ -13,4 +13,4 @@ const ForwardedRefPresentation = React.forwardRef((props, ref) => {
     )
 })
 
-export default ForwardedRefPresentation
+export default InputRef
