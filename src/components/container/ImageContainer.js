@@ -7,11 +7,25 @@ export default class ImageContainer extends Component {
         super()
 
         this.state = {
-            view: ''
+            view: '',
+            carView: {}
         }
 
         this.btnClick.bind(this)
-        this.renderView.bind(this)
+    }
+
+    componentDidMount() {
+        // api call to collect car information
+        this.setState({
+            carInfo: {
+                front: {header: "front", another: "This is something else"},
+                frontDriver: {header: "front driver", another: "This is something else"},
+                frontPassenger: {header: "front passenger", another: "This is something else"},
+                rearDriver: {header: "rear driver", another: "This is something else"},
+                rearPassenger: {header: "rear passenger", another: "This is something else"},
+            }
+        })
+        
     }
 
     btnClick(id) {
@@ -20,58 +34,20 @@ export default class ImageContainer extends Component {
         })
     }
 
-    renderView() {
-        let showView
-
-        switch (this.state.view) {
-            case "front": 
-                showView = <View carInfo={{
-                    header: this.state.view,
-                    another: "something is wrong up here"
-                }} />
-                break
-            case "front-driver":
-                showView = <View carInfo={{
-                    header: this.state.view,
-                    another: "this looks fine..."
-                }} />
-                break
-            case "front-passenger":
-                showView = <View carInfo={{
-                    header: this.state.view,
-                    another: "this looks ok, minor damages here"
-                }} />
-                break
-            case "rear-driver":
-                showView = <View carInfo={{
-                    header: this.state.view,
-                    another: "everything looks great!"
-                }} />
-                break
-            case "rear-passenger":
-                showView = <View carInfo={{
-                    header: this.state.view,
-                    another: "nothing to see here"
-                }} />
-                break
-            default:
-                showView = null
-                break
-        }
-
-        return showView
-    }
-
     render() {
+        let { carInfo, view } = this.state
+
         return (
             <div className="row">
                 <div className="col-md-4">
                     <ButtonsPres btnClick={ id => { this.btnClick(id) }} />
                 </div>
                 <div className="col-md-8">
-                {
-                    this.renderView()
-                }
+                    {
+                        view !== "" 
+                            ? <View carInfo={ carInfo[view] } />
+                            : null
+                    }
                 </div>
             </div>
         )

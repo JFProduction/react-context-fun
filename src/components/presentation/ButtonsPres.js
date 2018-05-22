@@ -28,7 +28,7 @@ const ButtonsPres = ({ btnClick }) => {
                         marginRight: "-30px"
                     }}
                     id="one"
-                    onClick={ () => btnClick('front-driver') }>
+                    onClick={ () => btnClick('frontDriver') }>
                     <img src="imgs/front-driver.png" alt="front-driver" />
                 </button>
                 <button
@@ -39,7 +39,7 @@ const ButtonsPres = ({ btnClick }) => {
                         marginLeft: "-30px"
                     }}
                     id="two"
-                    onClick={ () => btnClick('front-passenger') }>
+                    onClick={ () => btnClick('frontPassenger') }>
                     <img src="imgs/front-passenger.png" alt="front-passenger" />
                 </button>
             </div>
@@ -55,7 +55,7 @@ const ButtonsPres = ({ btnClick }) => {
                         marginTop: "10px"
                     }}
                     id="two"
-                    onClick={ () => btnClick('rear-driver') }>
+                    onClick={ () => btnClick('rearDriver') }>
                     <img src="imgs/rear-driver.png" alt="rear-driver" />
                 </button>
                 <button
@@ -67,7 +67,7 @@ const ButtonsPres = ({ btnClick }) => {
                         marginTop: "10px"
                     }}
                     id="two"
-                    onClick={ () => btnClick('rear-passenger') }>
+                    onClick={ () => btnClick('rearPassenger') }>
                     <img src="imgs/rear-passenger.png" alt="rear-passenger" />
                 </button>
             </div>
