@@ -5,10 +5,8 @@ const InputRef = React.forwardRef((props, ref) => {
     return (
         <div style={{ margin: 10 }}>
             <input className="form-control"
-                type="text"
                 ref={ ref }
-                { ...props } 
-            />
+                { ...props } />
         </div>
     )
 })
