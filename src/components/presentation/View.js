@@ -1,13 +1,19 @@
 import React from 'react'
+import Inspection from './Inspection'
 
-const View = ({ carInfo }) => {
+const View = ({ carInfo, prompts }) => {
     return (
         <div className="panel panel-default">
             <div className="panel-heading">
-                <h1>Viewing { carInfo.header }</h1>
+                <h1>Viewing { carInfo[1].Area.name }</h1>
             </div>
             <div className="panel-body">
-                <strong>quick info:</strong> { carInfo.another }
+                <Inspection header="Pre Inspection"
+                    inspectionData={ carInfo[1].Checks }
+                    prompts={ prompts } />
+                <Inspection header="Post Inspection"
+                    inspectionData={ carInfo[2].Checks }
+                    prompts={ prompts } />
             </div>
         </div>
     )

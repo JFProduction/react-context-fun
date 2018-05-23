@@ -6,6 +6,8 @@ export default {
         .query(params)
         .set('Accept', 'application/json')
         .end((err, response) => {
+            console.log(response)
+
             if (err) {
                 callback(err, null)
                 return
