@@ -39,3 +39,19 @@
 input:active, input:focus {
   outline: none !important;
 }
+
+.inspection-btn {
+  border-radius: 50%;
+  border: none;
+  font-size: 25px;
+  z-index: 9999;
+  outline: none;
+  transition: 100ms ease-in-out;
+  width: 50px;
+  height: 50px;
+}
+
+.inspection-btn.active {
+  background: #f27e20;
+  color: #fff;
+}

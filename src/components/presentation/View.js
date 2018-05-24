@@ -1,22 +1,30 @@
 import React from 'react'
 import Inspection from './Inspection'
+import PropTypes from 'prop-types'
 
 const View = ({ carInfo, prompts }) => {
+    let pre = carInfo[1],
+        post = carInfo[2]
     return (
         <div className="panel panel-default">
             <div className="panel-heading">
-                <h1>Viewing { carInfo[1].Area.name }</h1>
+                <h1>{ pre.Area.name } Inspection</h1>
             </div>
             <div className="panel-body">
-                <Inspection header="Pre Inspection"
-                    inspectionData={ carInfo[1].Checks }
+                <Inspection header="Pre"
+                    inspectionData={ pre.Checks }
                     prompts={ prompts } />
-                <Inspection header="Post Inspection"
-                    inspectionData={ carInfo[2].Checks }
+                <Inspection header="Post"
+                    inspectionData={ post.Checks }
                     prompts={ prompts } />
             </div>
         </div>
     )
+}
+
+View.propTypes = {
+    carInfo: PropTypes.object.isRequired,
+    prompts: PropTypes.array.isRequired
 }
 
 export default View

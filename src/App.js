@@ -1,13 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-// import { Provider } from 'react-redux';
-// import { changeNameStore } from './redux/stores/ChangeNameStore';
-// import ContextContainer from './components/container/ContextContainer';
-// import ReduxContainer from './components/container/ReduxContainer';
-// import RefContainer from './components/container/RefContainer';
-import ImageContainer from './components/container/ImageContainer';
-// import CurrancyTracker from './components/container/CurrancyTracker';
+import InspectionContainer from './components/container/InspectionContainer';
 
 class App extends Component {
   render() {
@@ -17,13 +11,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">React Stuff</h1>
         </header>
-        <ImageContainer />
-        {/* <ContextContainer />
-        <Provider store={ changeNameStore }>
-          <ReduxContainer />
-        </Provider>
-        <RefContainer /> */}
-        {/* <CurrancyTracker /> */}
+        <InspectionContainer />
       </div>
     );
   }
