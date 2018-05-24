@@ -9,7 +9,6 @@ const InspectionButtons = ({ btnClick }) => {
                 id="Front"
                 className="inspection-btn"
                 style={{
-                    position: "absolute",
                     left: 23 + "%",
                     marginTop: 50
                 }}
@@ -20,8 +19,7 @@ const InspectionButtons = ({ btnClick }) => {
                 id="FrontDriver"
                 className="inspection-btn"
                 style={{
-                    position: "absolute",
-                    left: 11 + "%",
+                    left: -14 + "%",
                     marginTop: 200
                 }}
                 onClick={() => btnClick("FrontDriver")}
@@ -31,8 +29,7 @@ const InspectionButtons = ({ btnClick }) => {
                 id="FrontPassenger"
                 className="inspection-btn"
                 style={{
-                    position: "absolute",
-                    left: 34 + "%",
+                    left: 62 + "%",
                     marginTop: 200
                 }}
                 onClick={() => btnClick("FrontPassenger")}
@@ -42,7 +39,6 @@ const InspectionButtons = ({ btnClick }) => {
                 id="Roof"
                 className="inspection-btn"
                 style={{
-                    position: "absolute",
                     left: 23 + "%",
                     marginTop: 340
                 }}
@@ -53,8 +49,7 @@ const InspectionButtons = ({ btnClick }) => {
                 id="RearDriver"
                 className="inspection-btn"
                 style={{
-                    position: "absolute",
-                    left: 10 + "%",
+                    left: -10 + "%",
                     marginTop: 340
                 }}
                 onClick={() => btnClick("RearDriver")}
@@ -64,8 +59,7 @@ const InspectionButtons = ({ btnClick }) => {
                 id="RearPassenger"
                 className="inspection-btn"
                 style={{
-                    position: "absolute",
-                    left: 36 + "%",
+                    left: 58 + "%",
                     marginTop: 340
                 }}
                 onClick={() => btnClick("RearPassenger")}
@@ -75,9 +69,8 @@ const InspectionButtons = ({ btnClick }) => {
                 id="Rear"
                 className="inspection-btn"
                 style={{
-                    position: "absolute",
                     left: 23 + "%",
-                    marginTop: 540
+                    marginTop: 605
                 }}
                 onClick={() => btnClick("Rear")}
             >+</button>
